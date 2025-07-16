@@ -34,6 +34,26 @@ We are going to start Netdata by using the next 2 commands sudo systemctl start 
 
 ![Step 4](https://github.com/user-attachments/assets/41f423df-84d1-41b2-ac12-b21653cbd7d4)
 
+## Test Scenarios
+*Simulation of High CPU Usage*
+
+To this scenario if you haven’t already installed stress on your vm you will need to. To do this You would need to do into your terminal and do the following command after that you will use the rest of the commands to do this simulation of high CPU usages.
+
+Sudo apt install stress
+
+![test scenarios CPU 1](https://github.com/user-attachments/assets/433a4bff-9e69-479e-b1cb-2519b4c0ac5e)
+
+Run 4 times Yes > /dev/null & 
+
+![test scenarios CPU 2 4 runs](https://github.com/user-attachments/assets/179f6120-8cce-4b39-936c-ad78a5eda46b)
+
+Graph Results
+
+![test scenarios CPU 2 4 runs results](https://github.com/user-attachments/assets/0162d1e3-f5c4-4597-9760-85eba950bbb5)
+
+TO TERMINATE RUN killall yes
+
+![test scenarios CPU 2 4 run killall](https://github.com/user-attachments/assets/c5e0b6be-12a3-4438-b7a0-4ffa10e9e876)
 
 ### Conclusion
 This project shows how to proactively maintain system health, diagnose problems, and increase reliability using real-time monitoring technologies. I was able to mimic real-world IT support scenarios like high CPU load, memory strain, and network traffic spikes, as well as visualize performance indicators and customize alarms, by installing and testing Netdata on a Linux server. In production settings, this type of active system monitoring is crucial for locating bottlenecks and guaranteeing uptime.
