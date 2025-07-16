@@ -36,4 +36,4 @@ We are going to start Netdata by using the next 2 commands sudo systemctl start 
 
 
 ### Conclusion
-
+This project shows how to proactively maintain system health, diagnose problems, and increase reliability using real-time monitoring technologies. I was able to mimic real-world IT support scenarios like high CPU load, memory strain, and network traffic spikes, as well as visualize performance indicators and customize alarms, by installing and testing Netdata on a Linux server. In production settings, this type of active system monitoring is crucial for locating bottlenecks and guaranteeing uptime.
