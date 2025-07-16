@@ -47,6 +47,7 @@ Run 4 times Yes > /dev/null &
 
 ![test scenarios CPU 2 4 runs](https://github.com/user-attachments/assets/179f6120-8cce-4b39-936c-ad78a5eda46b)
 
+
 Graph Results
 
 ![test scenarios CPU 2 4 runs results](https://github.com/user-attachments/assets/0162d1e3-f5c4-4597-9760-85eba950bbb5)
@@ -54,6 +55,46 @@ Graph Results
 TO TERMINATE RUN killall yes
 
 ![test scenarios CPU 2 4 run killall](https://github.com/user-attachments/assets/c5e0b6be-12a3-4438-b7a0-4ffa10e9e876)
+
+*RAM*
+
+To simulate RAM usage we are going to run 2 memory workers, each user at 1G for 30 seconds than it will stop.
+
+--vm 2 : Run memory workers
+
+--vm-bytes 1G: Each uses 1GB
+
+--timeout 30: Runs for 30 seconds, then stops.
+
+Command:
+
+Stress -- vm 2  --vm-bytes 1G –timeout 30
+
+![ram commandd](https://github.com/user-attachments/assets/efed6861-d3ca-4675-8fcc-8025c2e2c432)
+
+
+RESULTS
+
+<img width="997" height="741" alt="RAM Results" src="https://github.com/user-attachments/assets/50b963c4-ef18-407c-bc95-c81ce6311dc2" />
+
+*Network*
+
+Use ping -f to flood packets ( 2 times)
+
+-f is flooding ping: sends as many as possible per second
+
+Download a large File with wget
+
+Wget http:ipv4.dowload.thinkbroadband.com/100mb.zip
+
+<img width="1263" height="771" alt="network test command line" src="https://github.com/user-attachments/assets/c0b6f03f-9a9b-4e4f-9ce4-f920700897a2" />
+
+
+RESULTS
+
+<img width="1082" height="799" alt="network test results" src="https://github.com/user-attachments/assets/b8193c23-ae74-4a45-9923-ea61db6b34be" />
+
+
 
 ### Conclusion
 This project shows how to proactively maintain system health, diagnose problems, and increase reliability using real-time monitoring technologies. I was able to mimic real-world IT support scenarios like high CPU load, memory strain, and network traffic spikes, as well as visualize performance indicators and customize alarms, by installing and testing Netdata on a Linux server. In production settings, this type of active system monitoring is crucial for locating bottlenecks and guaranteeing uptime.
